@@ -158,6 +158,7 @@
     .offers-copy strong { color: white; }
     .offers-cta { min-height: 47px; padding: 0 1.1rem; color: var(--navy); background: white; white-space: nowrap; font-size: .76rem; }
     .offers-cta:hover { color: white; background: var(--orange); transform: translateY(-2px); }
+    .hp-field { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
 
     /* Product section */
     .design-section { padding: 9.5rem 0 8.5rem; }
@@ -584,7 +585,9 @@
           <div class="contact-form">
             <h3>Raccontaci cosa stai costruendo.</h3>
             <p>Compila il modulo: ti ricontatteremo per capire il progetto e indicarti il reparto più adatto.</p>
-            <form id="contactForm" novalidate>
+            <form id="contactForm" action="https://formspree.io/f/mqpaognj" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="Nuova richiesta dal sito DIGI HOUSE">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true">
               <div class="form-grid">
                 <div class="field"><label for="name">Nome e cognome</label><input id="name" name="name" type="text" autocomplete="name" required placeholder="Come ti chiami?"></div>
                 <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="nome@azienda.it"></div>
@@ -593,7 +596,7 @@
                 <div class="field full"><label for="message">Messaggio</label><textarea id="message" name="message" required placeholder="Descrivi brevemente il progetto o ciò che ti serve."></textarea></div>
               </div>
               <div class="form-footer"><span class="form-note">Nessun impegno: ti ricontattiamo per capire meglio di cosa hai bisogno.</span><button class="btn-primary" type="submit">Invia la richiesta <i class="bi bi-send"></i></button></div>
-              <p class="form-status" id="formStatus" role="status" aria-live="polite">La richiesta verrà preparata nel tuo programma email.</p>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite">La richiesta verrà inviata in modo sicuro a DIGI HOUSE.</p>
             </form>
           </div>
         </div>
@@ -640,18 +643,34 @@
 
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
-    contactForm.addEventListener('submit', event => {
+    contactForm.addEventListener('submit', async event => {
       event.preventDefault();
       if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
         return;
       }
-      const formData = new FormData(contactForm);
-      const subject = encodeURIComponent(`Richiesta DIGI HOUSE — ${formData.get('subject')}`);
-      const body = encodeURIComponent(`Nome: ${formData.get('name')}\nEmail: ${formData.get('email')}\nTelefono: ${formData.get('phone') || 'Non indicato'}\nReparto: ${formData.get('subject')}\n\nMessaggio:\n${formData.get('message')}`);
-      window.location.href = `mailto:degihousesrl@gmail.com?subject=${subject}&body=${body}`;
-      formStatus.classList.add('show');
-      formStatus.textContent = 'La richiesta è pronta nel tuo programma email. Se non si apre automaticamente, scrivi a degihousesrl@gmail.com.';
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalLabel = submitButton.innerHTML;
+      submitButton.disabled = true;
+      submitButton.innerHTML = 'Invio in corso <i class="bi bi-arrow-repeat"></i>';
+      formStatus.textContent = 'Invio della richiesta in corso…';
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+        if (!response.ok) throw new Error('Formspree response error');
+        formStatus.classList.add('show');
+        formStatus.textContent = 'Richiesta inviata. Grazie, ti ricontatteremo al più presto.';
+        contactForm.reset();
+      } catch (error) {
+        formStatus.classList.add('show');
+        formStatus.textContent = 'Non è stato possibile inviare la richiesta. Scrivi a degihousesrl@gmail.com oppure contattaci su WhatsApp.';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalLabel;
+      }
     });
   </script>
 </body>
