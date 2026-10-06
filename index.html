@@ -148,10 +148,10 @@
     .offers-section { padding: 4.5rem 0 2rem; background: var(--navy-soft); }
     .offers-panel { position: relative; overflow: hidden; padding: 2.2rem 2.4rem; color: white; background: var(--navy); }
     .offers-panel::after { content: "%"; position: absolute; right: 2rem; top: -2.3rem; color: rgba(255,255,255,.08); font: 800 12rem/1 "Manrope", sans-serif; letter-spacing: -.12em; }
-    .offers-layout { position: relative; z-index: 1; display: grid; grid-template-columns: 270px .9fr 1.45fr auto; gap: 2rem; align-items: center; }
-    .offers-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; align-self: stretch; }
-    .offers-image { min-height: 190px; overflow: hidden; background: #f2d7c8; }
-    .offers-image img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+    .offers-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(270px, .95fr); gap: 2.3rem; align-items: start; }
+    .offers-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; align-self: start; }
+    .offers-image { overflow: hidden; background: white; border: 1px solid rgba(255,255,255,.18); }
+    .offers-image img { width: 100%; height: auto; display: block; object-fit: contain; }
     .offers-kicker { color: #f0a56f; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
     .offers-title { margin-top: .45rem; font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.08; letter-spacing: -.055em; }
     .offers-copy { max-width: 480px; color: rgba(255,255,255,.72); font-size: .88rem; line-height: 1.55; }
@@ -350,9 +350,8 @@
       .catalog-section, .values-section { padding: 5rem 0; }
       .offers-section { padding: 3rem 0 1rem; }
       .offers-panel { padding: 1.6rem 1.25rem; }
-      .offers-layout { grid-template-columns: 1fr; gap: .75rem; }
-      .offers-gallery { width: min(100%, 320px); }
-      .offers-image { min-height: 210px; }
+      .offers-layout { grid-template-columns: 1fr; gap: 1.2rem; }
+      .offers-gallery { width: 100%; grid-template-columns: 1fr; }
       .offers-cta { justify-self: start; }
       .catalog-top, .contact-intro { display: block; }
       .catalog-note { margin-top: 1.7rem; }
