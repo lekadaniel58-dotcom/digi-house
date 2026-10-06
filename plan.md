@@ -6,7 +6,10 @@ Realizzare una landing page aziendale **single-page**, interamente contenuta in 
 ## Architettura dei file
 | Percorso | Responsabilità |
 | --- | --- |
-| `index.html` | Pagina completa: struttura semantica, stile Tailwind/CDN, CSS personalizzato, illustrazioni CSS, interazioni mobile e modulo. |
+| `index.html` | Pagina completa: struttura semantica, stile Tailwind/CDN, CSS personalizzato, foto locali, interazioni mobile e modulo. |
+| `assets/hero-house.jpg` | Fotografia reale di architettura contemporanea per la Hero. |
+| `assets/interior-doors.jpg` | Fotografia reale di porte interne in un ambiente arredato. |
+| `assets/roller-screen.jpg` | Fotografia reale di schermatura/serramento per la sezione comfort. |
 | `manus-routes.json` | Manifest della sola route pubblica `/`, utile alla preview di sviluppo. |
 | `TODO.md` | Esiti richiesti e criteri di completamento del progetto. |
 
@@ -64,5 +67,5 @@ Il wordmark è composto da un simbolo monolineare di casa/porta aperta e dalla s
 
 ## Compatibilità e pubblicazione
 - HTML semantico, meta viewport, title e description descrittivi; nessun contenuto dipende da JavaScript per essere letto.
-- Visuali architettoniche realizzate in CSS e integrate nel file, senza asset locali o URL di storage da copiare su GitHub Pages.
+- Fotografie reali referenziate localmente dalla cartella `assets/`, così il sito rimane trasferibile su GitHub Pages senza dipendere da URL temporanei.
 - Il form è gestito lato client; prima della pubblicazione reale, email, telefono e indirizzo dimostrativi dovranno essere sostituiti con i dati aziendali.

@@ -109,7 +109,8 @@
       position: absolute; inset: 4.4rem 0 0 1.4rem; overflow: hidden; background: #0a2f50;
       clip-path: polygon(13% 0, 100% 0, 100% 88%, 0 100%, 0 16%);
     }
-    .hero-image { background: linear-gradient(150deg, #e6d7bf 0%, #98bad0 48%, #0c3b60 49%, #12304b 100%); }
+    .hero-image { background: #0a2f50; }
+    .hero-image > img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.9) contrast(1.02); }
     .hero-architecture { position: absolute; inset: 0; overflow: hidden; }
     .hero-architecture .arch-sun { position: absolute; top: 13%; right: 17%; width: 60px; height: 60px; border-radius: 50%; background: #f3c882; box-shadow: 0 0 0 14px rgba(243,200,130,.17); }
     .hero-architecture .arch-ground { position: absolute; left: -8%; right: -8%; bottom: -8%; height: 35%; background: #475d55; transform: skewY(-7deg); }
@@ -152,7 +153,8 @@
     .chapter-intro .section-copy { margin-top: 1.5rem; }
     .material-row { display: grid; grid-template-columns: minmax(280px, .82fr) minmax(0, 1.25fr); gap: 2rem; padding-top: 4rem; align-items: stretch; }
     .material-visual { min-height: 520px; position: relative; overflow: hidden; background: #d8d1c8; }
-    .interior-art { position: absolute; inset: 0; background: linear-gradient(90deg, #cfc2b0 0 26%, #efe9df 26% 72%, #d8cdbd 72%); }
+    .interior-art { position: absolute; inset: 0; background: #d8d1c8; }
+    .interior-art > img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.92); }
     .interior-art::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 23%; background: repeating-linear-gradient(90deg, #b39d83 0 40px, #c8b79f 40px 43px); transform: perspective(270px) rotateX(44deg); transform-origin: bottom; }
     .interior-art .light-panel { position: absolute; top: 9%; right: 13%; width: 20%; height: 37%; background: linear-gradient(135deg, #fffefa, #b8d8e6); border: 6px solid #faf6ef; box-shadow: 0 0 0 2px #8c9daa; }
     .interior-art .door-panel { position: absolute; z-index: 2; left: 35%; bottom: 15%; width: 39%; height: 65%; background: linear-gradient(90deg, #916340, #c99a68 13%, #a7774c 66%, #754a31); box-shadow: 17px 0 0 rgba(0,31,63,.17); }
@@ -190,7 +192,8 @@
     .tech-visual { position: relative; min-height: 540px; }
     .tech-frame { position: absolute; inset: 0 0 0 2rem; border: 1px solid rgba(255,255,255,.28); }
     .tech-photo { position: absolute; top: 1.6rem; right: 1.7rem; bottom: 1.6rem; left: 0; overflow: hidden; }
-    .comfort-art { position: absolute; inset: 0; overflow: hidden; background: linear-gradient(130deg, #b8dbe3 0 55%, #71867a 55% 100%); }
+    .comfort-art { position: absolute; inset: 0; overflow: hidden; background: #71867a; }
+    .comfort-art > img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.88) contrast(1.03); }
     .comfort-art .comfort-sun { position: absolute; right: 13%; top: 10%; width: 72px; height: 72px; border-radius: 50%; background: #f6cf7e; box-shadow: 0 0 0 22px rgba(246,207,126,.25); }
     .comfort-art .comfort-terrace { position: absolute; right: -5%; bottom: -4%; width: 66%; height: 47%; background: #a69780; transform: skewY(-11deg); }
     .comfort-art .comfort-window { position: absolute; z-index: 2; left: 11%; top: 9%; width: 57%; height: 76%; border: 9px solid #eef4f4; background: repeating-linear-gradient(90deg, rgba(16,33,49,.24) 0 2px, transparent 2px 10px), linear-gradient(135deg, #d1edf0, #6d9fac); box-shadow: 8px 8px 0 rgba(0,31,63,.23); }
@@ -400,7 +403,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <div class="hero-image" role="img" aria-label="Illustrazione di villa contemporanea con grandi serramenti"><div class="hero-architecture" aria-hidden="true"><span class="arch-sun"></span><span class="arch-ground"></span><span class="arch-house"></span><span class="arch-door"></span><span class="arch-plant"></span></div></div>
+          <div class="hero-image"><img src="assets/hero-house.jpg" alt="Casa contemporanea con ampie finestre e serramenti scuri" fetchpriority="high"></div>
           <div class="hero-label"><small><span class="dot"></span>Soluzioni complete</small><strong>Dalla casa<br>al cantiere.</strong></div>
           <div class="hero-index"><b>01</b>&nbsp;&nbsp;DIGI HOUSE</div>
         </div>
@@ -428,7 +431,7 @@
         </div>
         <div class="material-row">
           <figure class="material-visual">
-            <div class="interior-art" role="img" aria-label="Illustrazione di porta interna in legno in un ambiente contemporaneo"><span class="light-panel"></span><span class="door-shadow"></span><span class="door-panel"></span></div>
+            <div class="interior-art"><img src="assets/interior-doors.jpg" alt="Porte interne vetrate in un ambiente contemporaneo" loading="lazy"></div>
             <figcaption class="material-caption">Finiture da vedere. Materiali da toccare.</figcaption>
           </figure>
           <div class="product-grid">
@@ -473,7 +476,7 @@
         </div>
         <figure class="tech-visual">
           <div class="tech-frame"></div>
-          <div class="tech-photo"><div class="comfort-art" role="img" aria-label="Illustrazione di sistema di zanzariera e avvolgibile su porta finestra"><span class="comfort-sun"></span><span class="comfort-terrace"></span><span class="comfort-window"></span><span class="comfort-plant"></span></div><figcaption class="tech-stat">Soluzioni tecniche<br><b>fatte per durare.</b></figcaption></div>
+          <div class="tech-photo"><div class="comfort-art"><img src="assets/roller-screen.jpg" alt="Sistema avvolgibile e schermatura per finestra" loading="lazy"></div><figcaption class="tech-stat">Soluzioni tecniche<br><b>fatte per durare.</b></figcaption></div>
         </figure>
       </div>
     </section>
