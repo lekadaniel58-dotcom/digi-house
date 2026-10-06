@@ -144,6 +144,18 @@
     .trust-item strong { display: block; font: 800 .82rem/1.2 "Manrope", sans-serif; }
     .trust-item span { display: block; color: var(--muted); font-size: .72rem; margin-top: .25rem; }
 
+    /* Offers */
+    .offers-section { padding: 4.5rem 0 2rem; background: var(--navy-soft); }
+    .offers-panel { position: relative; overflow: hidden; padding: 2.2rem 2.4rem; color: white; background: var(--navy); }
+    .offers-panel::after { content: "%"; position: absolute; right: 2rem; top: -2.3rem; color: rgba(255,255,255,.08); font: 800 12rem/1 "Manrope", sans-serif; letter-spacing: -.12em; }
+    .offers-layout { position: relative; z-index: 1; display: grid; grid-template-columns: .9fr 1.55fr auto; gap: 2rem; align-items: center; }
+    .offers-kicker { color: #f0a56f; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .offers-title { margin-top: .45rem; font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.08; letter-spacing: -.055em; }
+    .offers-copy { max-width: 480px; color: rgba(255,255,255,.72); font-size: .88rem; line-height: 1.55; }
+    .offers-copy strong { color: white; }
+    .offers-cta { min-height: 47px; padding: 0 1.1rem; color: var(--navy); background: white; white-space: nowrap; font-size: .76rem; }
+    .offers-cta:hover { color: white; background: var(--orange); transform: translateY(-2px); }
+
     /* Product section */
     .design-section { padding: 9.5rem 0 8.5rem; }
     .chapter-head { display: grid; grid-template-columns: 1fr 1.13fr; gap: 7rem; align-items: end; padding-bottom: 4rem; border-bottom: 1px solid var(--line); }
@@ -333,6 +345,10 @@
       .tech-visual { min-height: 420px; }
       .feature-list { gap: .6rem; }
       .catalog-section, .values-section { padding: 5rem 0; }
+      .offers-section { padding: 3rem 0 1rem; }
+      .offers-panel { padding: 1.6rem 1.25rem; }
+      .offers-layout { grid-template-columns: 1fr; gap: .75rem; }
+      .offers-cta { justify-self: start; }
       .catalog-top, .contact-intro { display: block; }
       .catalog-note { margin-top: 1.7rem; }
       .catalog-grid { grid-template-columns: repeat(2, 1fr); margin-top: 2.4rem; }
@@ -372,6 +388,7 @@
         <a href="#serramenti">Serramenti</a>
         <a href="#comfort">Comfort</a>
         <a href="#edilizia">Edilizia &amp; Fai-da-te</a>
+        <a href="#offerte">Offerte</a>
         <a href="#contatti">Contatti</a>
       </nav>
       <a class="header-cta" href="#contatti">Richiedi consulenza <i class="bi bi-arrow-up-right"></i></a>
@@ -381,6 +398,7 @@
       <a href="#serramenti">Serramenti</a>
       <a href="#comfort">Comfort</a>
       <a href="#edilizia">Edilizia &amp; Fai-da-te</a>
+      <a href="#offerte">Offerte</a>
       <a href="#contatti">Contatti</a>
     </nav>
   </header>
@@ -416,6 +434,21 @@
         <div class="trust-item"><span class="trust-icon"><i class="bi bi-compass"></i></span><div><strong>Consulenza che parte dal progetto</strong><span>Per scegliere senza lasciare nulla al caso.</span></div></div>
         <div class="trust-item"><span class="trust-icon"><i class="bi bi-box-seam"></i></span><div><strong>Assortimento, non compromessi</strong><span>Dal dettaglio di stile al materiale di cantiere.</span></div></div>
         <div class="trust-item"><span class="trust-icon"><i class="bi bi-truck"></i></span><div><strong>Vicini, anche nella consegna</strong><span>Organizziamo ciò che serve, quando serve.</span></div></div>
+      </div>
+    </section>
+
+    <section class="offers-section" id="offerte" aria-labelledby="offerte-title">
+      <div class="container">
+        <div class="offers-panel">
+          <div class="offers-layout">
+            <div>
+              <div class="offers-kicker"><i class="bi bi-tag-fill"></i> Occasioni DIGI HOUSE</div>
+              <h2 class="offers-title" id="offerte-title">Scopri le offerte<br>del momento.</h2>
+            </div>
+            <p class="offers-copy"><strong>Promozioni e condizioni dedicate</strong> su una selezione di prodotti per casa, serramenti, ferramenta, materiali edili e pittura. Scrivici per sapere cosa è disponibile ora.</p>
+            <a class="offers-cta" href="https://wa.me/393281860089?text=Ciao%20DIGI%20HOUSE%2C%20vorrei%20conoscere%20le%20offerte%20del%20momento." target="_blank" rel="noopener">Chiedi le offerte <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -562,7 +595,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark" style="border-color:white;color:white"><i class="bi bi-door-open"></i></span><span class="brand-word">DIGI HOUSE<small>casa &amp; cantiere</small></span></a><p>Il punto di riferimento per casa, edilizia e serramenti.</p></div>
-        <div><h4>REPARTI</h4><nav class="footer-links" aria-label="Reparti"><a href="#serramenti">Porte e finestre</a><a href="#comfort">Avvolgibili e zanzariere</a><a href="#edilizia">Ferramenta ed edilizia</a><a href="#edilizia">Pittura e colorificio</a></nav></div>
+        <div><h4>REPARTI</h4><nav class="footer-links" aria-label="Reparti"><a href="#serramenti">Porte e finestre</a><a href="#comfort">Avvolgibili e zanzariere</a><a href="#edilizia">Ferramenta ed edilizia</a><a href="#edilizia">Pittura e colorificio</a><a href="#offerte">Offerte del momento</a></nav></div>
         <div><h4>CONTATTI</h4><nav class="footer-links" aria-label="Contatti"><a href="mailto:degihousesrl@gmail.com">degihousesrl@gmail.com</a><a href="tel:+3908331860089">+39 0833 186 0089</a><a href="https://wa.me/393281860089" target="_blank" rel="noopener">WhatsApp: +39 328 186 0089</a><a href="https://maps.app.goo.gl/SMNmwgoUxkVnGmSTA" target="_blank" rel="noopener">Apri la sede su Google Maps</a></nav></div>
       </div>
       <div class="footer-bottom"><span>© <span id="year"></span> DIGI HOUSE. Tutti i diritti riservati.</span><span>Privacy · Cookie</span></div>
