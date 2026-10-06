@@ -10,6 +10,7 @@ Le tre immagini sono state selezionate tramite ricerca immagini web e salvate lo
 | `promo-rashexk8.jpg` | Sezione Offerte | Immagine promozionale fornita dal titolare del sito |
 | `promo-ktplus.jpg` | Sezione Offerte | Immagine promozionale fornita dal titolare del sito |
 | `promo-planirapid.jpg` | Sezione Offerte | Immagine promozionale fornita dal titolare del sito |
+| `promo-termocoathex.jpg` | Sezione Offerte | Immagine promozionale fornita dal titolare del sito |
 
 Prima della pubblicazione commerciale definitiva, verificare i diritti di utilizzo delle immagini con il titolare della fonte oppure sostituirle con fotografie proprietarie/licenziate.
 
