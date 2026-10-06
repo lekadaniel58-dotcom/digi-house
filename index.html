@@ -148,8 +148,9 @@
     .offers-section { padding: 4.5rem 0 2rem; background: var(--navy-soft); }
     .offers-panel { position: relative; overflow: hidden; padding: 2.2rem 2.4rem; color: white; background: var(--navy); }
     .offers-panel::after { content: "%"; position: absolute; right: 2rem; top: -2.3rem; color: rgba(255,255,255,.08); font: 800 12rem/1 "Manrope", sans-serif; letter-spacing: -.12em; }
-    .offers-layout { position: relative; z-index: 1; display: grid; grid-template-columns: 145px .9fr 1.45fr auto; gap: 2rem; align-items: center; }
-    .offers-image { align-self: stretch; min-height: 190px; overflow: hidden; background: #f2d7c8; }
+    .offers-layout { position: relative; z-index: 1; display: grid; grid-template-columns: 270px .9fr 1.45fr auto; gap: 2rem; align-items: center; }
+    .offers-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; align-self: stretch; }
+    .offers-image { min-height: 190px; overflow: hidden; background: #f2d7c8; }
     .offers-image img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
     .offers-kicker { color: #f0a56f; font-size: .7rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
     .offers-title { margin-top: .45rem; font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.08; letter-spacing: -.055em; }
@@ -350,7 +351,8 @@
       .offers-section { padding: 3rem 0 1rem; }
       .offers-panel { padding: 1.6rem 1.25rem; }
       .offers-layout { grid-template-columns: 1fr; gap: .75rem; }
-      .offers-image { width: min(210px, 100%); min-height: 240px; }
+      .offers-gallery { width: min(100%, 320px); }
+      .offers-image { min-height: 210px; }
       .offers-cta { justify-self: start; }
       .catalog-top, .contact-intro { display: block; }
       .catalog-note { margin-top: 1.7rem; }
@@ -444,12 +446,15 @@
       <div class="container">
         <div class="offers-panel">
           <div class="offers-layout">
-            <div class="offers-image"><img src="assets/promo-rashexk8.jpg" alt="Super promo DIGI HOUSE: RasHexK8 bianco a 10,20 euro più IVA fino ad esaurimento scorte" loading="lazy"></div>
+            <div class="offers-gallery" aria-label="Promozioni DIGI HOUSE">
+              <div class="offers-image"><img src="assets/promo-rashexk8.jpg" alt="Super promo DIGI HOUSE: RasHexK8 bianco a 10,20 euro più IVA fino ad esaurimento scorte" loading="lazy"></div>
+              <div class="offers-image"><img src="assets/promo-ktplus.jpg" alt="Promozione DIGI HOUSE: adesivo KT Plus Bianca a 11,80 euro IVA inclusa fino ad esaurimento scorte" loading="lazy"></div>
+            </div>
             <div>
               <div class="offers-kicker"><i class="bi bi-tag-fill"></i> Occasioni DIGI HOUSE</div>
               <h2 class="offers-title" id="offerte-title">Super promo<br>del momento.</h2>
             </div>
-            <p class="offers-copy"><strong>RasHexK8 bianco a 10,20 € + IVA.</strong> Adesivo rasante cementizio fibrorinforzato, specifico per sistemi di isolamento termico a cappotto. <strong>Fino ad esaurimento scorte.</strong></p>
+            <p class="offers-copy"><strong>RasHexK8 bianco a 10,20 € + IVA</strong> e <strong>KT Plus Bianca a 11,80 € IVA inclusa.</strong> Adesivi e rasanti per i tuoi lavori, <strong>fino ad esaurimento scorte.</strong></p>
             <a class="offers-cta" href="https://wa.me/393281860089?text=Ciao%20DIGI%20HOUSE%2C%20vorrei%20conoscere%20le%20offerte%20del%20momento." target="_blank" rel="noopener">Chiedi le offerte <i class="bi bi-arrow-up-right"></i></a>
           </div>
         </div>
