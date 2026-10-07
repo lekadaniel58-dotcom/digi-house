@@ -14,6 +14,7 @@ Le tre immagini sono state selezionate tramite ricerca immagini web e salvate lo
 | `ivc/*.png` | Catalogo prodotti IVC nei reparti DIGI HOUSE | Immagini ufficiali estratte dalle relative pagine prodotto su ivc.it |
 | `ivc/termocoathex-rivestimento-algadefend.png` | TermocoatHEX rivestimento acril-silossanico | Foto ufficiale del secchio reperita dalla pagina prodotto IVC |
 | `premier/*.jpg` | Prodotti Premier Premiscelati nei reparti DIGI HOUSE | Immagini ufficiali estratte dalle relative pagine prodotto su premierpremiscelati.it |
+| `opera/*.jpg` | Prodotti OPERA nei reparti DIGI HOUSE | Immagini ufficiali estratte dalle relative pagine prodotto su opera-adesivi.it |
 
 Prima della pubblicazione commerciale definitiva, verificare i diritti di utilizzo delle immagini con il titolare della fonte oppure sostituirle con fotografie proprietarie/licenziate.
 
