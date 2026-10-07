@@ -32,3 +32,6 @@ Le immagini nella cartella `ivc/` sono state reperite dalle pagine ufficiali dei
 
 ### Immagini illustrative Zangrillo
 Le immagini in `illustrative-zangrillo/` sono foto illustrative riconoscibili di utensili/confezioni reperite tramite ricerca immagini; non sostituiscono la referenza esatta. Le schede e i dati tecnici rimandano ai cataloghi ufficiali Zangrillo.
+
+### Foto ordine Zangrillo
+- `zangrillo-ordine/`: immagini prodotto estratte dal PDF allegato `OrdineB2B(1set202608.34).pdf`, usate nel reparto `ferramenta-utensili.html`.
