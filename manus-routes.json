@@ -1,1 +1,36 @@
-{"routes":[{"path":"/","title":"DIGI HOUSE | Casa, edilizia e serramenti"},{"path":"/pitture.html","title":"DIGI HOUSE | Pitture"},{"path":"/finiture.html","title":"DIGI HOUSE | Finiture"},{"path":"/materiali-edili.html","title":"DIGI HOUSE | Materiali edili"},{"path":"/adesivi-sigillanti.html","title":"DIGI HOUSE | Adesivi e sigillanti"},{"path":"/pennelli-accessori.html","title":"DIGI HOUSE | Pennelli, rulli e accessori"},{"path":"/protezione-preparazione.html","title":"DIGI HOUSE | Protezione e preparazione superfici"}]}
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "DIGI HOUSE | Casa, edilizia e serramenti"
+    },
+    {
+      "path": "/pitture.html",
+      "title": "DIGI HOUSE | Pitture"
+    },
+    {
+      "path": "/finiture.html",
+      "title": "DIGI HOUSE | Finiture"
+    },
+    {
+      "path": "/materiali-edili.html",
+      "title": "DIGI HOUSE | Materiali edili"
+    },
+    {
+      "path": "/adesivi-sigillanti.html",
+      "title": "DIGI HOUSE | Adesivi e sigillanti"
+    },
+    {
+      "path": "/pennelli-accessori.html",
+      "title": "DIGI HOUSE | Pennelli, rulli e accessori"
+    },
+    {
+      "path": "/protezione-preparazione.html",
+      "title": "DIGI HOUSE | Protezione e preparazione superfici"
+    },
+    {
+      "path": "/ferramenta-utensili.html",
+      "title": "Ferramenta e utensili"
+    }
+  ]
+}

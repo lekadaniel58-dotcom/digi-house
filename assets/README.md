@@ -24,3 +24,8 @@ Le immagini nella cartella `ivc/` sono state reperite dalle pagine ufficiali dei
 
 | `pennellificio/*` | Pennelli, rulli e accessori nel reparto DIGI HOUSE | Immagini ufficiali estratte dal catalogo Pennellificio Duemila su pennellificio2000.com |
 | `pennellificio/protezione/*` | Carta, teli, nastri e utensili nel reparto Protezione e preparazione | Immagini ufficiali estratte dalle pagine prodotto Pennellificio Duemila su pennellificio2000.com |
+
+## Zangrillo
+
+- `zangrillo/`: pagine intere renderizzate dai cataloghi ufficiali Zangrillo 2025 per il reparto `ferramenta-utensili.html`.
+- Fonte: [Cataloghi Zangrillo](https://www.zangrillo.it/cataloghi/), con collegamento ai PDF ufficiali Edilizia, Ferramenta e Utensileria in ogni scheda.
