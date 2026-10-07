@@ -160,6 +160,25 @@
     .offers-cta:hover { color: white; background: var(--orange); transform: translateY(-2px); }
     .hp-field { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
 
+    /* Offers popup */
+    .offer-modal { position: fixed; z-index: 100; inset: 0; display: none; place-items: center; padding: 1.2rem; background: rgba(0, 20, 42, .76); backdrop-filter: blur(7px); }
+    .offer-modal.is-open { display: grid; }
+    body.modal-open { overflow: hidden; }
+    .offer-dialog { position: relative; width: min(960px, 100%); max-height: min(92vh, 820px); overflow: auto; padding: 1.7rem; background: white; box-shadow: 0 28px 80px rgba(0, 20, 42, .32); }
+    .offer-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1.15rem; }
+    .offer-dialog-kicker { color: var(--orange); font-size: .7rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .offer-dialog h2 { margin-top: .32rem; color: var(--navy); font-size: clamp(1.6rem, 3vw, 2.45rem); line-height: 1; letter-spacing: -.06em; }
+    .offer-dialog-intro { max-width: 650px; margin-top: .55rem; color: var(--muted); font-size: .86rem; line-height: 1.5; }
+    .offer-close { width: 40px; height: 40px; flex: 0 0 40px; display: grid; place-items: center; color: var(--navy); background: var(--navy-soft); border: 0; font-size: 1.2rem; }
+    .offer-close:hover { color: white; background: var(--orange); }
+    .offer-modal-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .offer-modal-card { overflow: hidden; background: #f4f7fa; border: 1px solid var(--line); }
+    .offer-modal-card img { display: block; width: 100%; height: auto; }
+    .offer-dialog-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.2rem; }
+    .offer-dialog-note { color: var(--muted); font-size: .76rem; line-height: 1.45; }
+    .offer-dialog-cta { min-height: 46px; padding: 0 1.1rem; color: white; background: var(--navy); white-space: nowrap; font-size: .76rem; font-weight: 800; }
+    .offer-dialog-cta:hover { background: var(--orange); transform: translateY(-2px); }
+
     /* Product section */
     .design-section { padding: 9.5rem 0 8.5rem; }
     .chapter-head { display: grid; grid-template-columns: 1fr 1.13fr; gap: 7rem; align-items: end; padding-bottom: 4rem; border-bottom: 1px solid var(--line); }
@@ -354,6 +373,11 @@
       .offers-layout { grid-template-columns: 1fr; gap: 1.2rem; }
       .offers-gallery { width: 100%; grid-template-columns: 1fr; }
       .offers-cta { justify-self: start; }
+      .offer-modal { padding: .65rem; }
+      .offer-dialog { max-height: 94vh; padding: 1rem; }
+      .offer-modal-gallery { grid-template-columns: 1fr; gap: .65rem; }
+      .offer-dialog-footer { align-items: stretch; flex-direction: column; }
+      .offer-dialog-cta { justify-content: center; }
       .catalog-top, .contact-intro { display: block; }
       .catalog-note { margin-top: 1.7rem; }
       .catalog-grid { grid-template-columns: repeat(2, 1fr); margin-top: 2.4rem; }
@@ -382,6 +406,29 @@
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <div class="offer-modal" id="offerModal" role="dialog" aria-modal="true" aria-labelledby="offerModalTitle" aria-hidden="true">
+    <div class="offer-dialog" role="document">
+      <div class="offer-dialog-head">
+        <div>
+          <div class="offer-dialog-kicker"><i class="bi bi-tag-fill"></i> Occasioni DIGI HOUSE</div>
+          <h2 id="offerModalTitle">Le offerte del momento.</h2>
+          <p class="offer-dialog-intro">Scopri le nostre promo per i tuoi lavori: disponibilità limitata e condizioni valide fino ad esaurimento scorte.</p>
+        </div>
+        <button class="offer-close" id="offerClose" type="button" aria-label="Chiudi le offerte"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="offer-modal-gallery" aria-label="Galleria delle offerte">
+        <div class="offer-modal-card"><img src="assets/promo-rashexk8.jpg" alt="Promo RasHexK8 Bianco a 10,20 euro più IVA" loading="eager"></div>
+        <div class="offer-modal-card"><img src="assets/promo-ktplus.jpg" alt="Promo KT Plus Bianca a 11,80 euro IVA inclusa" loading="eager"></div>
+        <div class="offer-modal-card"><img src="assets/promo-planirapid.jpg" alt="Promo Planirapid 400 per massetti e calcestruzzi" loading="eager"></div>
+        <div class="offer-modal-card"><img src="assets/promo-termocoathex.jpg" alt="Promo TermocoatHEX con solo 300 secchi disponibili" loading="eager"></div>
+      </div>
+      <div class="offer-dialog-footer">
+        <p class="offer-dialog-note">Le quantità sono limitate. Per disponibilità e dettagli, contattaci direttamente.</p>
+        <a class="offer-dialog-cta" href="https://wa.me/393281860089?text=Ciao%20DIGI%20HOUSE%2C%20vorrei%20informazioni%20sulle%20offerte." target="_blank" rel="noopener">Chiedi informazioni <i class="bi bi-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
@@ -641,6 +688,29 @@
     }));
 
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const offerModal = document.getElementById('offerModal');
+    const offerClose = document.getElementById('offerClose');
+    const openOfferModal = () => {
+      offerModal.classList.add('is-open');
+      offerModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      offerClose.focus();
+    };
+    const closeOfferModal = () => {
+      offerModal.classList.remove('is-open');
+      offerModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    };
+    offerClose.addEventListener('click', closeOfferModal);
+    offerModal.addEventListener('click', event => {
+      if (event.target === offerModal) closeOfferModal();
+    });
+    offerModal.querySelector('.offer-dialog-cta').addEventListener('click', closeOfferModal);
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && offerModal.classList.contains('is-open')) closeOfferModal();
+    });
+    window.setTimeout(openOfferModal, 450);
 
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
