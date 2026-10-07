@@ -12,6 +12,7 @@ Le tre immagini sono state selezionate tramite ricerca immagini web e salvate lo
 | `promo-planirapid.jpg` | Sezione Offerte | Immagine promozionale fornita dal titolare del sito |
 | `promo-termocoathex.jpg` | Sezione Offerte | Immagine promozionale fornita dal titolare del sito |
 | `ivc/*.png` | Catalogo prodotti IVC nei reparti DIGI HOUSE | Immagini ufficiali estratte dalle relative pagine prodotto su ivc.it |
+| `premier/*.jpg` | Prodotti Premier Premiscelati nei reparti DIGI HOUSE | Immagini ufficiali estratte dalle relative pagine prodotto su premierpremiscelati.it |
 
 Prima della pubblicazione commerciale definitiva, verificare i diritti di utilizzo delle immagini con il titolare della fonte oppure sostituirle con fotografie proprietarie/licenziate.
 
