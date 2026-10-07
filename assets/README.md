@@ -29,3 +29,6 @@ Le immagini nella cartella `ivc/` sono state reperite dalle pagine ufficiali dei
 
 - `zangrillo/`: pagine intere renderizzate dai cataloghi ufficiali Zangrillo 2025 per il reparto `ferramenta-utensili.html`.
 - Fonte: [Cataloghi Zangrillo](https://www.zangrillo.it/cataloghi/), con collegamento ai PDF ufficiali Edilizia, Ferramenta e Utensileria in ogni scheda.
+
+### Immagini illustrative Zangrillo
+Le immagini in `illustrative-zangrillo/` sono foto illustrative riconoscibili di utensili/confezioni reperite tramite ricerca immagini; non sostituiscono la referenza esatta. Le schede e i dati tecnici rimandano ai cataloghi ufficiali Zangrillo.
