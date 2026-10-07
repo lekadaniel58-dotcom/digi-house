@@ -508,7 +508,7 @@ Microcopy:
 > Parla direttamente con il nostro team.
 
 #### WhatsApp
-[+39 328 186 0089](https://wa.me/393281860089)
+[+39 328 309 9390](https://wa.me/393283099390)
 
 Microcopy:
 
@@ -595,7 +595,7 @@ Il footer deve essere essenziale e ordinato.
 
 - degihousesrl@gmail.com
 - +39 0833 186 0089
-- WhatsApp: +39 328 186 0089
+- WhatsApp: +39 328 309 9390
 - Link alla sede su Google Maps.
 
 #### Nota finale
