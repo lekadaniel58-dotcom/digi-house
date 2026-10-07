@@ -23,3 +23,4 @@ La grafica `promo-rashexk8.jpg` è stata fornita direttamente dal titolare del s
 Le immagini nella cartella `ivc/` sono state reperite dalle pagine ufficiali dei prodotti IVC e utilizzate come riferimento fotografico per le schede DIGI HOUSE. Verificare i diritti di utilizzo commerciale prima della pubblicazione definitiva.
 
 | `pennellificio/*` | Pennelli, rulli e accessori nel reparto DIGI HOUSE | Immagini ufficiali estratte dal catalogo Pennellificio Duemila su pennellificio2000.com |
+| `pennellificio/protezione/*` | Carta, teli, nastri e utensili nel reparto Protezione e preparazione | Immagini ufficiali estratte dalle pagine prodotto Pennellificio Duemila su pennellificio2000.com |
