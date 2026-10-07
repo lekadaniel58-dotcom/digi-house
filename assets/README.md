@@ -35,3 +35,6 @@ Le immagini in `illustrative-zangrillo/` sono foto illustrative riconoscibili di
 
 ### Foto ordine Zangrillo
 - `zangrillo-ordine/`: immagini prodotto estratte dal PDF allegato `OrdineB2B(1set202608.34).pdf`, usate nel reparto `ferramenta-utensili.html`.
+
+### Logo
+- `logo-digihouse.png`: logo DIGI HOUSE fornito dall’utente, ritagliato e con sfondo trasparente per header e footer.
