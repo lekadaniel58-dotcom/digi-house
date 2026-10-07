@@ -258,6 +258,35 @@
     .supply-bar span { display: inline-flex; align-items: center; gap: .5rem; font-size: .77rem; font-weight: 700; }
     .supply-bar i { color: #f0a56f; }
 
+    /* IVC product catalogue */
+    .products-section { padding: 8rem 0; background: #fff; }
+    .products-intro { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+    .products-intro > div { max-width: 700px; }
+    .products-intro .section-copy { max-width: 650px; margin-top: 1.2rem; }
+    .products-note { max-width: 245px; padding: 1rem 0 1rem 1rem; border-left: 2px solid var(--orange); color: #536474; font-size: .78rem; line-height: 1.55; }
+    .products-note strong { color: var(--navy); }
+    .product-group { margin-top: 4.2rem; }
+    .product-group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.1rem; padding-bottom: .85rem; border-bottom: 1px solid var(--line); }
+    .product-group-head h3 { color: var(--navy); font-size: 1.45rem; letter-spacing: -.05em; }
+    .product-group-head span { color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .product-catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; }
+    .product-ivc-card { display: flex; min-height: 100%; flex-direction: column; padding: 1.25rem; background: var(--canvas); border: 1px solid var(--line); }
+    .product-ivc-card:hover { border-color: #abc1d3; box-shadow: 0 12px 28px rgba(0,31,63,.08); }
+    .product-ivc-card > small { color: var(--orange); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .product-ivc-card h4 { margin-top: .45rem; color: var(--navy); font-size: 1.08rem; line-height: 1.08; letter-spacing: -.04em; }
+    .product-ivc-card > p { margin-top: .75rem; color: #5d6d7b; font-size: .78rem; line-height: 1.55; }
+    .product-tech { margin-top: 1rem; border-top: 1px solid var(--line); }
+    .product-tech summary { padding: .75rem 0; color: var(--navy); cursor: pointer; font-size: .7rem; font-weight: 800; list-style: none; }
+    .product-tech summary::-webkit-details-marker { display: none; }
+    .product-tech summary::after { content: '+'; float: right; color: var(--orange); font-size: 1rem; line-height: .7; }
+    .product-tech[open] summary::after { content: '−'; }
+    .product-tech ul { display: grid; gap: .42rem; margin: 0 0 .9rem; padding: 0 0 0 1rem; color: #5d6d7b; font-size: .7rem; line-height: 1.45; }
+    .product-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: auto; padding-top: .9rem; }
+    .product-link-ivc { display: inline-flex; align-items: center; gap: .35rem; padding: .58rem .7rem; color: white; background: var(--navy); font-size: .64rem; font-weight: 800; }
+    .product-link-ivc.secondary { color: var(--navy); background: white; border: 1px solid #cbd8e2; }
+    .product-link-ivc:hover { color: white; background: var(--orange); border-color: var(--orange); }
+    .product-source-note { margin-top: 2rem; color: #778694; font-size: .68rem; line-height: 1.55; }
+
     /* Values */
     .values-section { padding: 8rem 0; }
     .values-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 6rem; align-items: start; }
@@ -330,6 +359,7 @@
       .chapter-head { gap: 3rem; }
       .material-row { grid-template-columns: .76fr 1.24fr; }
       .catalog-grid { grid-template-columns: repeat(3, 1fr); }
+      .product-catalog-grid { grid-template-columns: repeat(2, 1fr); }
       .tech-layout, .values-layout { gap: 3rem; }
       .contact-side, .contact-form { padding: 2.3rem; }
     }
@@ -383,6 +413,13 @@
       .catalog-grid { grid-template-columns: repeat(2, 1fr); margin-top: 2.4rem; }
       .catalog-item { min-height: 172px; padding: 1rem; }
       .catalog-item h3 { margin-top: 1.9rem; font-size: .92rem; }
+      .products-section { padding: 5rem 0; }
+      .products-intro { display: block; }
+      .products-note { margin-top: 1.7rem; }
+      .product-group { margin-top: 3rem; }
+      .product-catalog-grid { grid-template-columns: 1fr; }
+      .product-group-head { display: block; }
+      .product-group-head span { display: block; margin-top: .4rem; }
       .supply-bar { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
       .values-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .values-sticky { position: static; }
@@ -440,6 +477,7 @@
         <a href="#serramenti">Serramenti</a>
         <a href="#comfort">Comfort</a>
         <a href="#edilizia">Edilizia &amp; Fai-da-te</a>
+        <a href="#prodotti-ivc">Prodotti IVC</a>
         <a href="#offerte">Offerte</a>
         <a href="#contatti">Contatti</a>
       </nav>
@@ -450,6 +488,7 @@
       <a href="#serramenti">Serramenti</a>
       <a href="#comfort">Comfort</a>
       <a href="#edilizia">Edilizia &amp; Fai-da-te</a>
+      <a href="#prodotti-ivc">Prodotti IVC</a>
       <a href="#offerte">Offerte</a>
       <a href="#contatti">Contatti</a>
     </nav>
@@ -594,6 +633,50 @@
       </div>
     </section>
 
+    <section class="products-section" id="prodotti-ivc" aria-labelledby="prodotti-ivc-title">
+      <div class="container">
+        <div class="products-intro">
+          <div>
+            <div class="eyebrow">Catalogo tecnico DIGI HOUSE</div>
+            <h2 class="section-title" id="prodotti-ivc-title">Le soluzioni IVC,<br><em>scelte per il tuo lavoro.</em></h2>
+            <p class="section-copy">Una selezione organizzata per reparto di pitture, primer, finiture e sistemi tecnici IVC. Ogni scheda riassume l’uso del prodotto e rimanda alla documentazione ufficiale disponibile.</p>
+          </div>
+          <p class="products-note"><strong>Informazioni chiare, prima della scelta.</strong><br>Consulta la pagina IVC o apri la scheda tecnica per verificare il ciclo più adatto al tuo supporto.</p>
+        </div>
+
+        <div class="product-group" aria-labelledby="finiture-ivc-title">
+          <div class="product-group-head"><h3 id="finiture-ivc-title">Finiture, protezione e preparazione</h3><span>Interni · esterni · superfici murarie</span></div>
+          <div class="product-catalog-grid">
+            <article class="product-ivc-card"><small>Silopittura traspirante</small><h4>TRX</h4><p>Finitura murale all’acqua ad alta copertura, pensata per pareti interne, cartongesso e supporti che richiedono permeabilità al vapore.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Permeabilità al vapore SD circa 0,1 m.</li><li>Resa teorica circa 10–12 m²/l per mano.</li><li>Applicabile a pennello, rullo o spruzzo.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/trx/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2026/03/019A_TRX_09.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Idropittura per interni</small><h4>X-ONE</h4><p>Idropittura acrilica traspirante e idrorepellente per pareti e soffitti interni, con buona copertura e stesura agevole.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Elevato potere coprente e buona resa.</li><li>Elevata permeabilità al vapore.</li><li>Buon punto di bianco e pennellabilità.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/x-one/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Finitura silossanica</small><h4>THERMORIFLEX IR</h4><p>Finitura esterna acril-silossanica con pigmenti riflettenti e microsfere cave, pensata per proteggere e contenere il riscaldamento superficiale.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Alta permeabilità al vapore, classe V1.</li><li>Idrorepellente e resistente agli agenti atmosferici.</li><li>Protezione da muffe, funghi, muschio e alghe.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/thermoriflex-ir/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2022/09/Thermoriflex-IR_437_ed01.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Anticondensa · antimuffa</small><h4>THERMOPAINT</h4><p>Idropittura interna con microsfere cave di vetro, pensata per ambienti esposti a condensa e umidità.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Azione termoisolante, anticondensa e antimuffa.</li><li>Buona traspirabilità e proprietà fonoassorbenti dichiarate.</li><li>Diluizione indicata 15–30% con acqua.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/thermopaint/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/2026/01/22/thermopaint-pittura-murale-per-interni/" target="_blank" rel="noopener">Approfondisci <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Detergente per esterni</small><h4>D900</h4><p>Soluzione concentrata per il trattamento preliminare di pareti esterne contaminate da muschio e alghe.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Uso su superfici esterne.</li><li>Azione detergente contro muschio e alghe.</li><li>Da usare come preparazione prima del ciclo di finitura.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/d900-algadefend/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Trattamento antimuffa</small><h4>D800</h4><p>Soluzione risanante per pareti soggette alla formazione di muffe, con azione ad ampio spettro e odore contenuto.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Specifico per pareti con muffa.</li><li>Basso odore e bassa tensione di vapore.</li><li>Trattamento preliminare prima della tinteggiatura.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/d800-muffadefend/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Primer acrilico</small><h4>FISSATIVO ACRILICO</h4><p>Primer professionale per isolare, consolidare e rendere più uniforme il supporto prima della finitura.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Buona penetrazione e azione consolidante.</li><li>Versioni concentrate 1:2, 1:4 e 1:10.</li><li>Indicato su cemento, muratura, gesso e cartongesso.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/fissativi-acrilici/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2024/12/Fissativi-acrilici_ST.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Fondo uniformante</small><h4>SILOGRUND</h4><p>Fondo acril-silossanico per uniformare l’assorbimento e preparare il supporto alla finitura successiva.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Buona adesione, traspirabilità e capacità uniformante.</li><li>Resa teorica indicata 10–12 m²/l.</li><li>Applicabile su intonaco, calcestruzzo, muratura e cartongesso.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/groundhex/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2025/12/606_SILOGRUND_03.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Pittura antimuffa</small><h4>SILOPITTURA</h4><p>Pittura murale acrilica silanizzata per interni umidi, lavabile, traspirante e pensata per limitare la formazione di muffa.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Buona copertura, adesione e idrorepellenza.</li><li>Diluizione indicata 30% per la prima mano e 20% per la seconda.</li><li>Intervallo tra le mani indicato 3–4 ore.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/silopittura-antimuffa/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2024/12/Silopittura-Muffadefend_ST.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Finitura al quarzo</small><h4>PRISMA</h4><p>Pittura murale al quarzo per proteggere e decorare superfici interne ed esterne con una finitura opaca e uniforme.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Utilizzabile in ambienti esterni e interni.</li><li>Buona capacità coprente.</li><li>Finitura opaca e uniforme.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/prisma-quarzo-fino/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Fissativo pigmentato</small><h4>UNIFORMA</h4><p>Fissativo pigmentato all’acqua per preparare e uniformare pareti nuove o già tinteggiate, inclusi i supporti in cartongesso.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Buona penetrazione e uniformità visiva.</li><li>Diluizione indicata 20–30% con acqua.</li><li>Disponibile in bianco nei formati 1, 5 e 14 litri.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/uniforma/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2025/06/116T_UNIFORMA_ed03.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+          </div>
+        </div>
+
+        <div class="product-group" aria-labelledby="sistemi-ivc-title">
+          <div class="product-group-head"><h3 id="sistemi-ivc-title">Sistemi tecnici e ripristino</h3><span>Cappotto · calcestruzzo · impermeabilizzazione</span></div>
+          <div class="product-catalog-grid">
+            <article class="product-ivc-card"><small>Protezione ferri d’armatura</small><h4>FERRHEX COMPONENTE A</h4><p>Parte in polvere del sistema bicomponente FerrHEX per la protezione anticorrosiva delle armature e il ripristino del calcestruzzo.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Sistema a base di leganti cementizi e inibitori di corrosione.</li><li>Contribuisce a prevenire l’ossidazione dei ferri.</li><li>Il sistema completo resiste all’acqua e agli agenti inquinanti.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/ferrhex/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Protezione ferri d’armatura</small><h4>FERRHEX COMPONENTE B</h4><p>Parte liquida del sistema FerrHEX, da miscelare con il componente A per preparare la malta passivante anticorrosiva.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Rapporto di miscelazione del sistema: 3 parti A e 1 parte B.</li><li>Pot life indicato 50–60 minuti a 23 °C.</li><li>Il sistema miscelato è applicabile a pennello in due mani.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/ferrhex/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2026/05/FERRHEX-B_24B.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Adesivo-rasante ETICS</small><h4>TERMOCOATHEX</h4><p>Adesivo-rasante cementizio fibrorinforzato per sistemi di isolamento termico esterno a cappotto.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Base cementizia con cariche minerali selezionate.</li><li>Fibre polimeriche e additivi specifici.</li><li>Per incollaggio e rasatura dei sistemi ETICS.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/collante-rasante-termocoathex/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2024/12/TermocoatHEX-Collante-Rasante_ST.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+            <article class="product-ivc-card"><small>Malta strutturale</small><h4>MALTHEX</h4><p>La corrispondenza ufficiale IVC è MALTHEX HR200: malta tixotropica fibrorinforzata per riparazioni e ricostruzioni del calcestruzzo.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Premiscelata in polvere a base cementizia.</li><li>Fibrorinforzata e a ritiro controllato.</li><li>Indicata per travi, colonne, facciate e cornici.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/malthex-hr200/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Impermeabilizzante fibrorinforzato</small><h4>FLEXOCOTE</h4><p>Malta cementizia monocomponente e fibrorinforzata per impermeabilizzare e proteggere strutture e superfici interne ed esterne.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>A base di cemento Portland e aggregati selezionati.</li><li>Elevata adesione ed elasticità.</li><li>Indicata per calcestruzzo, balconi, terrazze e piscine.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/flexocote/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Adesivo-rasante bianco</small><h4>RASHEX K8 BIANCO</h4><p>La corrispondenza IVC è RASHEX K8 WHITE: adesivo-rasante cementizio fibrorinforzato per sistemi di isolamento a cappotto.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Base cementizia con cariche minerali e fibre.</li><li>Specifico per sistemi ETICS.</li><li>Per incollaggio e rasatura dei pannelli isolanti.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/en/cpt_prodotti/rashex-k8-white/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a></div></article>
+            <article class="product-ivc-card"><small>Adesivo-rasante grigio</small><h4>RASHEX K8 GRIGIO</h4><p>La corrispondenza IVC è RASHEX K8 GRUND: adesivo-rasante cementizio grigio per incollaggio e rasatura armata dei sistemi a cappotto.</p><details class="product-tech"><summary>Dettagli tecnici</summary><ul><li>Utilizzabile su polistirene, lana minerale, poliuretano e sughero.</li><li>Fibre per ridurre ritiro e cavillature.</li><li>Confezione indicata: sacco da 25 kg.</li></ul></details><div class="product-links"><a class="product-link-ivc" href="https://www.ivc.it/cpt_prodotti/rashex-k8-grund/" target="_blank" rel="noopener">Pagina IVC <i class="bi bi-arrow-up-right"></i></a><a class="product-link-ivc secondary" href="https://www.ivc.it/wp-content/uploads/2024/12/RasHEX-K8-GRUND_ST.pdf" target="_blank" rel="noopener">Scheda PDF <i class="bi bi-file-earmark-pdf"></i></a></div></article>
+          </div>
+        </div>
+        <p class="product-source-note">Le descrizioni sono sintesi editoriali DIGI HOUSE basate sulle pagine ufficiali IVC. Le schede tecniche e i dati applicativi fanno fede nella versione pubblicata da IVC; verifica sempre il documento più recente prima dell’uso professionale.</p>
+      </div>
+    </section>
+
     <section class="values-section" aria-labelledby="valori-title">
       <div class="container values-layout">
         <div class="values-sticky">
@@ -654,7 +737,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark" style="border-color:white;color:white"><i class="bi bi-door-open"></i></span><span class="brand-word">DIGI HOUSE<small>casa &amp; cantiere</small></span></a><p>Il punto di riferimento per casa, edilizia e serramenti.</p></div>
-        <div><h4>REPARTI</h4><nav class="footer-links" aria-label="Reparti"><a href="#serramenti">Porte e finestre</a><a href="#comfort">Avvolgibili e zanzariere</a><a href="#edilizia">Ferramenta ed edilizia</a><a href="#offerte">Offerte del momento</a></nav></div>
+        <div><h4>REPARTI</h4><nav class="footer-links" aria-label="Reparti"><a href="#serramenti">Porte e finestre</a><a href="#comfort">Avvolgibili e zanzariere</a><a href="#edilizia">Ferramenta ed edilizia</a><a href="#prodotti-ivc">Prodotti IVC</a><a href="#offerte">Offerte del momento</a></nav></div>
         <div><h4>CONTATTI</h4><nav class="footer-links" aria-label="Contatti"><a href="mailto:degihousesrl@gmail.com">degihousesrl@gmail.com</a><a href="tel:+3908331860089">+39 0833 186 0089</a><a href="https://wa.me/393281860089" target="_blank" rel="noopener">WhatsApp: +39 328 186 0089</a><a href="https://maps.app.goo.gl/SMNmwgoUxkVnGmSTA" target="_blank" rel="noopener">Apri la sede su Google Maps</a></nav></div>
       </div>
       <div class="footer-bottom"><span>© <span id="year"></span> DIGI HOUSE. Tutti i diritti riservati.</span><span>Privacy · Cookie</span></div>
