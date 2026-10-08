@@ -265,6 +265,16 @@
     .value-item p { max-width: 380px; margin-top: .4rem; color: #637383; font-size: .82rem; line-height: 1.5; }
     .value-item i { color: var(--orange); font-size: 1.45rem; }
 
+    .comfort-departments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-top: 2rem; }
+    .comfort-department { display: flex; align-items: center; gap: .8rem; min-height: 88px; padding: 1rem; color: var(--navy); background: white; border: 1px solid var(--line); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .comfort-department:hover { transform: translateY(-3px); border-color: var(--orange); box-shadow: 0 12px 25px rgba(0,31,63,.1); }
+    .comfort-department > i { color: var(--orange); font-size: 1.35rem; }
+    .comfort-department span { min-width: 0; flex: 1; }
+    .comfort-department small { display: block; color: var(--muted); font-size: .58rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .comfort-department strong { display: block; margin-top: .18rem; font: 800 1rem/1.1 "Manrope", sans-serif; }
+    .comfort-department em { display: block; margin-top: .28rem; color: var(--muted); font-size: .7rem; font-style: normal; }
+    .comfort-department > b { color: var(--orange); font-size: .95rem; }
+
     /* Contacts */
     .contact-section { padding: 7.5rem 0 0; background: #eff4f7; }
     .contact-intro { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 3rem; }
@@ -548,20 +558,6 @@
               <a class="product-link" href="infissi-sallustio.html#persiane-scuri">Scopri persiane e scuri <i class="bi bi-arrow-up-right"></i></a>
               <i class="bi bi-bricks card-icon" aria-hidden="true"></i>
             </article>
-            <article class="product-card">
-              <small>Reparto / 05</small>
-              <h3>Avvolgibili.</h3>
-              <p>Schermatura solare, privacy, ventilazione e sicurezza con profili classici e soluzioni innovative.</p>
-              <a class="product-link" href="avvolgibili-zanzariere.html#avvolgibili">Scopri gli avvolgibili <i class="bi bi-arrow-up-right"></i></a>
-              <i class="bi bi-sliders2-vertical card-icon" aria-hidden="true"></i>
-            </article>
-            <article class="product-card">
-              <small>Reparto / 06</small>
-              <h3>Zanzariere.</h3>
-              <p>Avvolgenti, plissettate, ZIP e pannelli per vivere finestre e portefinestre con più comfort.</p>
-              <a class="product-link" href="avvolgibili-zanzariere.html#zanzariere">Scopri le zanzariere <i class="bi bi-arrow-up-right"></i></a>
-              <i class="bi bi-wind card-icon" aria-hidden="true"></i>
-            </article>
           </div>
         </div>
       </div>
@@ -578,6 +574,14 @@
             <div class="feature"><i class="bi bi-bug"></i><strong>Protezione dagli insetti</strong><span>Reti discrete e resistenti per vivere le finestre con più libertà.</span></div>
             <div class="feature"><i class="bi bi-cpu"></i><strong>Motorizzazioni</strong><span>Apertura e chiusura più semplici, con comandi intuitivi.</span></div>
             <div class="feature"><i class="bi bi-rulers"></i><strong>Soluzioni su misura</strong><span>Misure precise e configurazioni pensate per ogni apertura.</span></div>
+          </div>
+          <div class="comfort-departments" aria-label="Reparti avvolgibili e zanzariere">
+            <a class="comfort-department" href="avvolgibili-zanzariere.html#avvolgibili">
+              <i class="bi bi-sliders2-vertical"></i><span><small>Reparto comfort / 01</small><strong>Avvolgibili</strong><em>Schermatura, privacy e sicurezza.</em></span><b class="bi bi-arrow-up-right"></b>
+            </a>
+            <a class="comfort-department" href="avvolgibili-zanzariere.html#zanzariere">
+              <i class="bi bi-wind"></i><span><small>Reparto comfort / 02</small><strong>Zanzariere</strong><em>Aria e protezione dagli insetti.</em></span><b class="bi bi-arrow-up-right"></b>
+            </a>
           </div>
         </div>
         <figure class="tech-visual">
