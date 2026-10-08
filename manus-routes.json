@@ -34,15 +34,19 @@
     },
     {
       "path": "/infissi-sallustio.html",
-      "title": "Infissi Sallustio"
+      "title": "Finestre, persiane e scuri"
     },
     {
       "path": "/porte-interne-aip.html",
-      "title": "Porte interne AIP"
+      "title": "Porte interne"
     },
     {
       "path": "/porte-blindate-dierre.html",
-      "title": "Porte blindate Dierre"
+      "title": "Porte blindate e portoncini"
+    },
+    {
+      "path": "/avvolgibili-zanzariere.html",
+      "title": "Avvolgibili e zanzariere"
     }
   ]
 }
