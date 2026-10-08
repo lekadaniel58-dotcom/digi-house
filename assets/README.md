@@ -38,3 +38,5 @@ Le immagini in `illustrative-zangrillo/` sono foto illustrative riconoscibili di
 
 ### Logo
 - `logo-digihouse.png`: logo DIGI HOUSE fornito dall’utente, ritagliato e con sfondo trasparente per header e footer.
+
+- `ivc/fissativo-acrilico-1a4.jpg`: foto singola del Fissativo acrilico IVC Base acqua 1 a 4, usata nel reparto Finiture.
