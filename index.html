@@ -127,13 +127,14 @@
       font: 700 .72rem/1 "Manrope", sans-serif; letter-spacing: .13em; writing-mode: vertical-rl;
     }
     .hero-index b { color: var(--orange); font-size: 1.2rem; }
-    .scroll-hint { position: absolute; bottom: 1.9rem; left: max(20px, calc((100% - 1180px) / 2)); display: inline-flex; align-items: center; gap: .55rem; color: #536474; font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; transition: color .2s ease; }
+    .scroll-hint { position: absolute; z-index: 10; bottom: 1.9rem; left: max(20px, calc((100% - 1180px) / 2)); display: inline-flex; align-items: center; gap: .55rem; padding: .62rem .85rem .62rem .7rem; color: white; background: var(--navy); font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; box-shadow: 0 8px 18px rgba(0,31,63,.16); transition: background .2s ease, transform .2s ease; }
     .scroll-hint::before { content: ""; width: 24px; height: 1px; background: var(--orange); }
-    .scroll-hint:hover { color: var(--orange); }
+    .scroll-hint:hover { color: white; background: var(--orange); transform: translateY(-2px); }
+    .scroll-hint:hover::before { background: white; }
     .scroll-doodle { display: inline-grid; place-items: center; color: var(--orange); font-size: .9rem; }
     .scroll-doodle i { font-size: .9rem; }
     .scroll-hint-copy { display: inline-flex; align-items: baseline; gap: .45rem; }
-    .scroll-hint-copy small { color: #8795a1; font-size: .55rem; letter-spacing: .1em; }
+    .scroll-hint-copy small { color: rgba(255,255,255,.68); font-size: .55rem; letter-spacing: .1em; }
     .scroll-hint-copy strong { font-size: .66rem; letter-spacing: .07em; }
     .scroll-chevron { color: var(--orange); font-size: .8rem; animation: scroll-bounce 1.8s ease-in-out infinite; }
     @keyframes scroll-bounce { 0%,100% { transform: translateY(-2px); } 50% { transform: translateY(3px); } }
@@ -354,8 +355,7 @@
       .hero::before { display: none; }
       .hero-layout { min-height: auto; display: flex; flex-direction: column; align-items: stretch; }
       .hero-copy { padding: 4rem 0 2.8rem; color: white; }
-      .scroll-hint { left: 16px; bottom: 1.1rem; color: rgba(255,255,255,.86); }
-      .scroll-hint-copy small { color: rgba(255,255,255,.58); }
+      .scroll-hint { left: 16px; bottom: 1.1rem; }
       .trust-item { padding: 1.15rem 1rem; }
       .hero-copy .eyebrow { color: #f0a56f; }
       .hero-title { color: white; font-size: clamp(3rem, 14vw, 4.2rem); }
