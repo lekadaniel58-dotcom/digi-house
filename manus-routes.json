@@ -47,6 +47,18 @@
     {
       "path": "/avvolgibili-zanzariere.html",
       "title": "Avvolgibili e zanzariere"
+    },
+    {
+      "path": "/catalogo-ivc.html",
+      "title": "DIGI HOUSE | Catalogo IVC"
+    },
+    {
+      "path": "/catalogo-opera.html",
+      "title": "DIGI HOUSE | Catalogo OPERA"
+    },
+    {
+      "path": "/catalogo-premier.html",
+      "title": "DIGI HOUSE | Catalogo Premier"
     }
   ]
 }
