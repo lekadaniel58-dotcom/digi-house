@@ -48,3 +48,4 @@ Le immagini in `illustrative-zangrillo/` sono foto illustrative riconoscibili di
 - `fornitori/aip-logo.svg`: logo Gruppo AIP Porte dal sito ufficiale AIP.
 - `fornitori/dierre-logo.svg`: logo Dierre dal sito ufficiale Dierre.
 - `fornitori/sallustio-logo.jpg`: logo Sallustio Infissi e Persiane, selezionato dal risultato pubblico del marchio e collegato al sito ufficiale Sallustio.
+- `fornitori/sallustio-logo.png`: versione rifilata del logo Sallustio per mostrarlo interamente nella fascia partner.
