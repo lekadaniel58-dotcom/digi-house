@@ -440,10 +440,10 @@
     .supplier-heading p { max-width: 300px; justify-self: end; color: var(--muted); font-size: .82rem; line-height: 1.5; }
     .supplier-logos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
     .supplier-logo { display: grid; place-items: center; min-height: 106px; padding: 1.2rem 1.35rem; background: white; border: 1px solid #dfe7ed; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
-    .supplier-logo:hover { border-color: #d1dde5; }
+    .supplier-logo:hover { transform: translateY(-3px); border-color: #b9cbd8; box-shadow: 0 12px 24px rgba(0,31,63,.08); }
     .supplier-logo img { display: block; width: 100%; height: 58px; object-fit: contain; }
     .supplier-logo-dark { background: var(--navy); border-color: var(--navy); }
-    .supplier-logo-dark:hover { border-color: var(--navy); }
+    .supplier-logo-dark:hover { border-color: var(--orange); }
     .supplier-logo-dark img { height: 52px; }
 </style>
 </head>
@@ -714,11 +714,11 @@
     <div class="container">
       <div class="supplier-heading"><span class="eyebrow">Collaborazioni selezionate</span><h2 id="supplier-title">I nostri partner.</h2><p>Soluzioni e materiali scelti da aziende specializzate nei rispettivi settori.</p></div>
       <div class="supplier-logos">
-        <div class="supplier-logo" aria-label="IVC — sito ufficiale"><img src="assets/fornitori/ivc-logo.png" alt="IVC The Color Company"></div>
-        <div class="supplier-logo" aria-label="Di Donato Spa — sito ufficiale"><img src="assets/fornitori/didonato-logo.png" alt="Di Donato Spa"></div>
-        <div class="supplier-logo supplier-logo-dark" aria-label="AIP Porte — sito ufficiale"><img src="assets/fornitori/aip-logo.svg" alt="Gruppo AIP Porte"></div>
-        <div class="supplier-logo supplier-logo-dark" aria-label="Dierre — sito ufficiale"><img src="assets/fornitori/dierre-logo.svg" alt="Dierre"></div>
-        <div class="supplier-logo" aria-label="Sallustio Infissi — sito ufficiale"><img src="assets/fornitori/sallustio-logo.png" alt="Sallustio Infissi e Persiane"></div>
+        <a class="supplier-logo" href="pitture.html" aria-label="Scopri i prodotti IVC nel catalogo DIGI HOUSE"><img src="assets/fornitori/ivc-logo.png" alt="IVC The Color Company"></a>
+        <a class="supplier-logo" href="pitture.html" aria-label="Scopri i prodotti Di Donato nel catalogo DIGI HOUSE"><img src="assets/fornitori/didonato-logo.png" alt="Di Donato Spa"></a>
+        <a class="supplier-logo supplier-logo-dark" href="porte-interne-aip.html" aria-label="Scopri le porte interne AIP nel catalogo DIGI HOUSE"><img src="assets/fornitori/aip-logo.svg" alt="Gruppo AIP Porte"></a>
+        <a class="supplier-logo supplier-logo-dark" href="porte-blindate-dierre.html" aria-label="Scopri le porte blindate Dierre nel catalogo DIGI HOUSE"><img src="assets/fornitori/dierre-logo.svg" alt="Dierre"></a>
+        <a class="supplier-logo" href="infissi-sallustio.html" aria-label="Scopri gli infissi Sallustio nel catalogo DIGI HOUSE"><img src="assets/fornitori/sallustio-logo.png" alt="Sallustio Infissi e Persiane"></a>
       </div>
     </div>
   </section>
