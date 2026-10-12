@@ -421,7 +421,13 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
-  </style>
+  
+    .social-links { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem; margin-top: 1.2rem; }
+    .social-links > span { margin-right: .25rem; color: rgba(255,255,255,.58); font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .social-links a { display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .6rem; color: white; border: 1px solid rgba(255,255,255,.22); font-size: .72rem; transition: background .2s ease, border-color .2s ease; }
+    .social-links a:hover { color: white; background: var(--orange); border-color: var(--orange); }
+    .social-links i { font-size: .9rem; }
+</style>
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
@@ -691,7 +697,7 @@
       <div class="footer-top">
         <div class="footer-brand"><a class="brand" href="#top"><img class="brand-logo" src="assets/logo-digihouse-symbol.svg" alt=""><span class="brand-word">DIGI HOUSE</span></a><p>Il punto di riferimento per casa, edilizia e serramenti.</p></div>
         <div><h4>REPARTI</h4><nav class="footer-links" aria-label="Reparti"><a href="#serramenti">Porte e finestre</a><a href="#comfort">Avvolgibili e zanzariere</a><a href="#edilizia">Ferramenta ed edilizia</a><a href="pennelli-accessori.html">Pennelli e accessori</a><a href="#offerte">Offerte del momento</a></nav></div>
-        <div><h4>CONTATTI</h4><nav class="footer-links" aria-label="Contatti"><a href="mailto:degihousesrl@gmail.com">degihousesrl@gmail.com</a><a href="tel:+3908331860089">+39 0833 186 0089</a><a href="https://wa.me/393283099390" target="_blank" rel="noopener">WhatsApp: +39 328 309 9390</a><a href="https://maps.app.goo.gl/SMNmwgoUxkVnGmSTA" target="_blank" rel="noopener">Apri la sede su Google Maps</a></nav></div>
+        <div><h4>CONTATTI</h4><nav class="footer-links" aria-label="Contatti"><a href="mailto:degihousesrl@gmail.com">degihousesrl@gmail.com</a><a href="tel:+3908331860089">+39 0833 186 0089</a><a href="https://wa.me/393283099390" target="_blank" rel="noopener">WhatsApp: +39 328 309 9390</a><a href="https://maps.app.goo.gl/SMNmwgoUxkVnGmSTA" target="_blank" rel="noopener">Apri la sede su Google Maps</a></nav><div class="social-links" aria-label="Social DIGI HOUSE"><span>Seguici</span><a href="https://facebook.com/712149025312569" target="_blank" rel="noopener noreferrer" aria-label="DIGI HOUSE su Facebook"><i class="bi bi-facebook" aria-hidden="true"></i><span>Facebook</span></a><a href="https://www.instagram.com/digihouse_srl?obrf=dGcwN3VzM3ppaGZk" target="_blank" rel="noopener noreferrer" aria-label="DIGI HOUSE su Instagram"><i class="bi bi-instagram" aria-hidden="true"></i><span>Instagram</span></a></div></div>
       </div>
       <div class="footer-bottom"><span>© <span id="year"></span> DIGI HOUSE. Tutti i diritti riservati.</span><span>Privacy · Cookie</span></div>
     </div>
