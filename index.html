@@ -356,6 +356,11 @@
       .hero::before { display: none; }
       .hero-layout { min-height: auto; display: flex; flex-direction: column; align-items: stretch; }
       .hero-copy { padding: 4rem 0 2.8rem; color: white; }
+      .supplier-heading { grid-template-columns: 1fr; gap: .8rem; }
+      .supplier-heading p { justify-self: start; }
+      .supplier-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .supplier-logo:last-child { grid-column: 1 / -1; }
+
       .scroll-hint { left: 16px; bottom: 1.1rem; }
       .trust-item { padding: 1.15rem 1rem; }
       .trust-icon { width: 40px; height: 40px; flex-basis: 40px; }
@@ -427,6 +432,19 @@
     .social-links a { display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .6rem; color: white; border: 1px solid rgba(255,255,255,.22); font-size: .72rem; transition: background .2s ease, border-color .2s ease; }
     .social-links a:hover { color: white; background: var(--orange); border-color: var(--orange); }
     .social-links i { font-size: .9rem; }
+
+    .supplier-strip { padding: 5.2rem 0 4.6rem; background: #f5f8fa; border-top: 1px solid var(--line); }
+    .supplier-heading { display: grid; grid-template-columns: .72fr 1fr 1.1fr; align-items: end; gap: 2rem; padding-bottom: 2.2rem; border-bottom: 1px solid var(--line); }
+    .supplier-heading .eyebrow { margin: 0; }
+    .supplier-heading h2 { color: var(--navy); font-size: clamp(1.75rem, 3vw, 2.8rem); line-height: 1; letter-spacing: -.06em; }
+    .supplier-heading p { max-width: 300px; justify-self: end; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+    .supplier-logos { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .supplier-logo { display: grid; place-items: center; min-height: 106px; padding: 1.2rem 1.35rem; background: white; border: 1px solid #dfe7ed; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .supplier-logo:hover { transform: translateY(-3px); border-color: #b9cbd8; box-shadow: 0 12px 24px rgba(0,31,63,.08); }
+    .supplier-logo img { display: block; width: 100%; height: 58px; object-fit: contain; }
+    .supplier-logo-dark { background: var(--navy); border-color: var(--navy); }
+    .supplier-logo-dark:hover { border-color: var(--orange); }
+    .supplier-logo-dark img { height: 52px; }
 </style>
 </head>
 <body>
@@ -691,6 +709,19 @@
       </div>
     </section>
   </main>
+
+  <section class="supplier-strip" aria-labelledby="supplier-title">
+    <div class="container">
+      <div class="supplier-heading"><span class="eyebrow">Collaborazioni selezionate</span><h2 id="supplier-title">I nostri partner di fornitura.</h2><p>Soluzioni e materiali scelti da aziende specializzate nei rispettivi settori.</p></div>
+      <div class="supplier-logos">
+        <a class="supplier-logo" href="https://www.ivc.it/" target="_blank" rel="noopener noreferrer" aria-label="IVC — sito ufficiale"><img src="assets/fornitori/ivc-logo.png" alt="IVC The Color Company"></a>
+        <a class="supplier-logo" href="https://didonatospa.it/en/" target="_blank" rel="noopener noreferrer" aria-label="Di Donato Spa — sito ufficiale"><img src="assets/fornitori/didonato-logo.png" alt="Di Donato Spa"></a>
+        <a class="supplier-logo" href="https://aipporte.com/" target="_blank" rel="noopener noreferrer" aria-label="AIP Porte — sito ufficiale"><img src="assets/fornitori/aip-logo.svg" alt="Gruppo AIP Porte"></a>
+        <a class="supplier-logo supplier-logo-dark" href="https://www.dierre.com/" target="_blank" rel="noopener noreferrer" aria-label="Dierre — sito ufficiale"><img src="assets/fornitori/dierre-logo.svg" alt="Dierre"></a>
+        <a class="supplier-logo" href="https://www.sallustioinfissi.it/" target="_blank" rel="noopener noreferrer" aria-label="Sallustio Infissi — sito ufficiale"><img src="assets/fornitori/sallustio-logo.jpg" alt="Sallustio Infissi e Persiane"></a>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">

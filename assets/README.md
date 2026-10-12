@@ -41,3 +41,10 @@ Le immagini in `illustrative-zangrillo/` sono foto illustrative riconoscibili di
 
 - `ivc/fissativo-acrilico-1a4.jpg`: foto singola del Fissativo acrilico IVC Base acqua 1 a 4, usata nel reparto Finiture.
 - `promo-gasbeton.png`: immagine promozionale Gasbeton DIGI HOUSE fornita dall'utente, usata nella galleria e nel popup Offerte.
+
+## Loghi partner fornitori
+- `fornitori/ivc-logo.png`: logo IVC dal sito ufficiale IVC.
+- `fornitori/didonato-logo.png`: logo Di Donato Spa dal sito ufficiale Di Donato.
+- `fornitori/aip-logo.svg`: logo Gruppo AIP Porte dal sito ufficiale AIP.
+- `fornitori/dierre-logo.svg`: logo Dierre dal sito ufficiale Dierre.
+- `fornitori/sallustio-logo.jpg`: logo Sallustio Infissi e Persiane, selezionato dal risultato pubblico del marchio e collegato al sito ufficiale Sallustio.
