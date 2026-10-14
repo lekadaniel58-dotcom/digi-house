@@ -445,6 +445,34 @@
     .supplier-logo-dark { background: var(--navy); border-color: var(--navy); }
     .supplier-logo-dark:hover { border-color: var(--orange); }
     .supplier-logo-dark img { height: 52px; }
+
+    /* Correzioni responsive homepage: mantenere tutti i contenuti entro il viewport. */
+    @media (max-width: 720px) {
+      .supplier-heading { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+      .supplier-heading p { justify-self: start; max-width: 100%; }
+      .supplier-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .supplier-logo { min-width: 0; padding: .85rem; }
+      .supplier-logo img { max-width: 100%; }
+      .hero-layout, .hero-copy, .hero-visual, .catalog-grid, .offers-layout,
+      .offers-gallery, .contact-layout, .contact-side, .contact-form,
+      .tech-layout, .values-layout, .material-row { min-width: 0; max-width: 100%; }
+      .hero-title, .section-title, .chapter-head h2, .supplier-heading h2 {
+        overflow-wrap: break-word;
+      }
+      .hero-title { font-size: clamp(2.35rem, 11vw, 4.2rem); }
+      .hero-actions > a, .offers-cta { max-width: 100%; white-space: normal; text-align: center; }
+      .catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .catalog-item { min-width: 0; overflow-wrap: anywhere; }
+      .supply-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      img, video, iframe { max-width: 100%; }
+    }
+    @media (max-width: 380px) {
+      .container { width: calc(100% - 28px); }
+      .hero-title { font-size: clamp(2.15rem, 10.5vw, 2.8rem); }
+      .catalog-grid { gap: .6rem; }
+      .catalog-item { padding: .8rem; }
+      .supplier-logos { gap: .65rem; }
+    }
 </style>
 </head>
 <body>
